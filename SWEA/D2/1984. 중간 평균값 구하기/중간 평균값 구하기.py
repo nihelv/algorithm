@@ -1,11 +1,12 @@
-t = int(input())
+t=int(input())
+
 for _ in range(1, t+1):
-    n = list(map(int, input().split()))
-    max_num = n[0]
-    min_num = n[0]
+    n=list(map(int, input().split()))
+   
     nmax=max(n)
     nmin=min(n)
-    n.remove(nmax)
-    n.remove(nmin)
-    
-    print(f'#{_}', round(sum(n)/len(n)))
+    n.pop(n.index(nmax))
+    n.pop(n.index(nmin))
+   
+    res=round(sum(n)/len(n))
+    print(f'#{_} {res}')
