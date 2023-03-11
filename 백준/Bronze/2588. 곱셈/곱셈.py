@@ -1,19 +1,6 @@
-a=int(input())
-b=int(input())
-c=list(str(b))
-d=[]
-e=[]
-
-for _ in range(1, len(c)+1):
-    _=-_
-    i=0
-    i=a*int(c[_])
-    d.append(i)
-
-for elem in range(0, len(d)):
-    j=d[elem] * 10**elem
-    e.append(j)
-
-
+a = int(input())
+b = int(input())
+d = [a * int(i) for i in reversed(str(b))]
+result = sum(d[i] * 10**i for i in range(len(d)))
 print(*d, sep='\n')
-print(sum(e))
+print(result)
